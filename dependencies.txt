@@ -1,5 +1,5 @@
-java (used in)
- - Java
- - Gradle
-tomcat (used in)
- - Apache Tomcat
+python3 (used in)
+ - Python
+ - Pip
+flask (used in)
+ - Pyhton Flask
