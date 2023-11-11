@@ -1,13 +1,43 @@
-function Sec_30_Timer() {
-    alert("Done!");
+let timer;
+let minutes = 25;
+let seconds = 0;
+let isRunning = false;
+
+function startTimer() {
+    if (!isRunning) {
+        timer = setInterval(updateTimer, 1000);
+        isRunning = true;
+    }
 }
-function confirmClick() {
-    alert("Clicked!")
-    document.body.innerHTML = "<p>Yes?</p>"
+
+function pauseTimer() {
+    clearInterval(timer);
+    isRunning = false;
 }
 
-const button = document.querySelector("button");
+function restartTimer() {
+    clearInterval(timer);
+    isRunning = false;
+    minutes = 25;
+    seconds = 0;
+    updateTimer();
+}
 
-button.addEventListener("click", confirmClick);
+function updateTimer() {
+    if (seconds === 0) {
+        if (minutes === 0) {
+            clearInterval(timer);
+            isRunning = false;
+            alert('Timer is up!');
+            return;
+        }
+        minutes--;
+        seconds = 59;
+    } else {
+        seconds--;
+    }
 
-setTimeout(Sec_30_Timer, 30000);
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(seconds).padStart(2, '0');
+    document.getElementById('timer').innerHTML = `${formattedMinutes}:${formattedSeconds}`;
+}
