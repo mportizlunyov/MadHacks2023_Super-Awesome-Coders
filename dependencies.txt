@@ -2,4 +2,4 @@ python3 (used in)
  - Python
  - Pip
 flask (used in)
- - Pyhton Flask
+ - Python Flask
