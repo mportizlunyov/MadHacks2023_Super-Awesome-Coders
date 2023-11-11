@@ -6,7 +6,8 @@
 
 # Confirm with Dependencies.txt
 # - python3
-# - 
+# - pip
+# - flask
 
 INSTALL_PANDAS_Q=""
 INSTALL_PIP_Q=""
