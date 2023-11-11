@@ -5,8 +5,9 @@
 #  application created for the 2023 MadHacks hackathon
 
 # Confirm with Dependencies.txt
-# - java
-# - gradle
+# - python3
+# - pip
+# - flask
 
 $install_python_q
 $install_pip_q
@@ -84,10 +85,4 @@ catch {
 #  Name may change with development
 
 $env:FLASK_ENV='development'
-
-# Execute Python backends
-python .\backend.py
-$env:FLASK_APP='views.py'
-python .\views.py
-$env:FLASK_APP='app.py'
-python .\app.py
+flask run
