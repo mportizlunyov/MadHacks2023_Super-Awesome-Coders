@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MadHacks 2023</title>
-</head>
-<body style="background-color: yellow;">
+    <head>
+        <meta charset="UTF-8">
+        <title>MadHacks 2023</title>
+    </head>
+    <body>
+        <h1>25-Minute Timer</h1>
+        <button id="startBtn" onclick="startTimer()">Start</button>
+        <button id="pauseBtn" onclick="pauseTimer()">Pause</button>
+        <button id="restartBtn" onclick="restartTimer()">Restart</button>
+        <p id="timer">25:00</p>
 
-<h1 style="color: black;">25-Minute Timer</h1>
-<button id="startBtn" onclick="startTimer()">Start</button>
-<button id="pauseBtn" onclick="pauseTimer()">Pause</button>
-<button id="restartBtn" onclick="restartTimer()">Restart</button>
-<p id="timer" style="color: black;">25:00</p>
-
-<script src="{{ url_for('static', filename='timer.js') }}"></script>
-
-</body>
+        <script src="{{ url_for('static', filename='timer1.js') }}"></script>
+    </body>
 </html>
